@@ -1,0 +1,44 @@
+[
+  {
+    "file": "hero.jpg",
+    "title": "File:Coffee beans 2015 (Unsplash).jpg",
+    "artist": "Unsplash (via Wikimedia Commons)",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Coffee_beans_2015_(Unsplash).jpg"
+  },
+  {
+    "file": "bean.jpg",
+    "title": "File:Coffee (Unsplash BIYoKb7Lux0).jpg",
+    "artist": "Unsplash (via Wikimedia Commons)",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Coffee_(Unsplash_BIYoKb7Lux0).jpg"
+  },
+  {
+    "file": "brew.jpg",
+    "title": "File:Chemex (Unsplash).jpg",
+    "artist": "Unsplash (via Wikimedia Commons)",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chemex_(Unsplash).jpg"
+  },
+  {
+    "file": "cup.jpg",
+    "title": "File:M5 espresso labs, Cincinnati, United States (Unsplash).jpg",
+    "artist": "Unsplash (via Wikimedia Commons)",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:M5_espresso_labs,_Cincinnati,_United_States_(Unsplash).jpg"
+  },
+  {
+    "file": "menu.jpg",
+    "title": "File:Monochrome coffee and pencil (Unsplash).jpg",
+    "artist": "Unsplash (via Wikimedia Commons)",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Monochrome_coffee_and_pencil_(Unsplash).jpg"
+  },
+  {
+    "file": "visit.jpg",
+    "title": "File:Light bulbs in a coffee shop (Unsplash).jpg",
+    "artist": "Tomas Jasovsky (via Wikimedia Commons)",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File:Light_bulbs_in_a_coffee_shop_(Unsplash).jpg"
+  }
+]

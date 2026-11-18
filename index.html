@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>رُست — کافه و رُستری، تهران</title>
+  <meta name="description" content="رُستری کوچکی در کریمخان؛ سه تک‌خاستگاه، دو روش دم‌آوری، و منویی که هر فصل از نو نوشته می‌شود." />
+  <meta name="theme-color" content="#080605" />
+  <meta property="og:title" content="رُست — کافه و رُستری، تهران" />
+  <meta property="og:description" content="از دانه تا فنجان، بدون میانبر." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080605'/%3E%3Cellipse cx='16' cy='16' rx='8' ry='11' fill='%23c98f52'/%3E%3Cpath d='M16 6c-3 4-3 16 0 20' stroke='%23080605' stroke-width='2.2' fill='none'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Vazirmatn:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#main">پرش به محتوا</a>
+
+  <div class="stage" aria-hidden="true">
+    <canvas id="scene"></canvas>
+    <div class="stage__glow"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#hero" aria-label="رُست — بازگشت به ابتدا">
+      <span class="brand__fa">رُست</span>
+      <span class="brand__en">ROAST</span>
+    </a>
+
+    <nav class="nav__links" aria-label="ناوبری اصلی">
+      <a href="#bean">دانه</a>
+      <a href="#brew">دم‌آوری</a>
+      <a href="#menu">منو</a>
+      <a href="#visit">کافه</a>
+    </nav>
+
+    <a class="btn btn--line nav__cta" href="#visit"><span>رزرو میز</span></a>
+    <button class="nav__menu" type="button" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span>
+      <span class="sr-only">منو</span>
+    </button>
+  </header>
+
+  <div class="mobile" id="mobile-menu" hidden>
+    <nav aria-label="ناوبری موبایل">
+      <a href="#bean"><span>۰۱</span> دانه</a>
+      <a href="#brew"><span>۰۲</span> دم‌آوری</a>
+      <a href="#menu"><span>۰۴</span> منو</a>
+      <a href="#visit"><span>۰۵</span> کافه</a>
+    </nav>
+    <div class="mobile__foot">
+      <p>کریمخان زند، تهران</p>
+      <p>۰۷:۰۰ — ۲۳:۰۰</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- 00 · HERO -->
+    <section id="hero" class="hero" data-scene="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-hero="1"><span class="dot"></span> کافه و رُستری — کریمخان، تهران</p>
+          <h1 class="hero__title">
+            <span class="line"><span data-hero="2">از دانه</span></span>
+            <span class="line"><span data-hero="3">تا فنجان،</span></span>
+            <span class="line"><span data-hero="4" class="gold">بدون میانبر.</span></span>
+          </h1>
+          <p class="hero__lede" data-hero="5">
+            رُستری کوچکی در کریمخان. سه تک‌خاستگاه روی قفسه، دو روش دم‌آوری روی بار،
+            و منویی که هر فصل از نو نوشته می‌شود.
+          </p>
+          <div class="hero__acts" data-hero="6">
+            <a class="btn btn--solid" href="#visit"><span>رزرو میز</span><i class="arr" aria-hidden="true"></i></a>
+            <a class="btn btn--ghost" href="#menu"><span>دیدن منو</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__meta wrap" data-hero="7">
+        <div class="hero__meta-item"><span class="k">ساعت کار</span><span class="v">۰۷:۰۰ — ۲۳:۰۰</span></div>
+        <div class="hero__meta-item"><span class="k">رُست تازه</span><span class="v">هر سه‌شنبه</span></div>
+        <div class="hero__meta-item"><span class="k">نشانی</span><span class="v">کریمخان زند، تهران</span></div>
+      </div>
+
+      <div class="hero__side" aria-hidden="true">
+        <span>EST. 2019</span>
+        <span class="hero__side-line"></span>
+        <span>TEHRAN</span>
+      </div>
+
+      <div class="hero__cue" aria-hidden="true" data-hero="8">
+        <span>اسکرول کنید</span>
+        <i></i>
+      </div>
+    </section>
+
+    <!-- 01 · BEAN -->
+    <section id="bean" class="section" data-scene="bean">
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow" data-reveal>۰۱ — دانه</p>
+          <h2 class="display" data-lines>
+            <span class="line"><span>دانه‌هایی که</span></span>
+            <span class="line"><span><em class="gold">مسیرشان</em> را می‌دانیم.</span></span>
+          </h2>
+          <p class="lede" data-reveal>
+            هر بچ با نام مزرعه و ارتفاعش می‌آید. رُست هفتگی انجام می‌شود و چیزی که
+            بیش از دو هفته در قفسه بماند، فروخته نمی‌شود.
+          </p>
+        </div>
+
+        <div class="origins col-wide" data-reveal>
+          <div class="origins__row origins__head" aria-hidden="true">
+            <span>خاستگاه</span><span>ارتفاع</span><span>نت‌های فنجان</span><span>رُست</span>
+          </div>
+          <ul class="origins__list">
+            <li class="origins__row">
+              <span class="origins__name">اتیوپی <i>·</i> یرگاچف</span>
+              <span class="num">۱٬۸۰۰ م</span>
+              <span class="origins__notes">گل، شکلات تلخ</span>
+              <span class="tag">روشن</span>
+            </li>
+            <li class="origins__row">
+              <span class="origins__name">کلمبیا <i>·</i> هویلا</span>
+              <span class="num">۱٬۷۵۰ م</span>
+              <span class="origins__notes">کارامل، سیب سرخ</span>
+              <span class="tag">متوسط</span>
+            </li>
+            <li class="origins__row">
+              <span class="origins__name">برزیل <i>·</i> سرادو</span>
+              <span class="num">۱٬۱۰۰ م</span>
+              <span class="origins__notes">فندق، کاکائو</span>
+              <span class="tag">متوسط تیره</span>
+            </li>
+          </ul>
+          <p class="origins__foot">هر سه، همین حالا روی بار دم می‌شوند.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · BREW -->
+    <section id="brew" class="section" data-scene="brew">
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow" data-reveal>۰۲ — دم‌آوری</p>
+          <h2 class="display" data-lines>
+            <span class="line"><span>سه روش،</span></span>
+            <span class="line"><span>سه شخصیت.</span></span>
+          </h2>
+          <p class="lede" data-reveal>
+            آب را وزن می‌کنیم، دمایش را می‌سنجیم، و زمان را از ترازو می‌خوانیم، نه از حافظه.
+          </p>
+        </div>
+
+        <div class="methods">
+          <article class="method" data-reveal>
+            <div class="method__top">
+              <span class="method__idx num">۰۱</span>
+              <span class="method__time num">۰۳:۰۰</span>
+            </div>
+            <h3 class="method__name">V60</h3>
+            <p class="method__fa">فیلتر — روشن و شفاف</p>
+            <p class="method__spec num">۱۵ گ قهوه · ۲۵۰ گ آب · ۹۲°</p>
+            <span class="method__line" aria-hidden="true"></span>
+          </article>
+
+          <article class="method" data-reveal>
+            <div class="method__top">
+              <span class="method__idx num">۰۲</span>
+              <span class="method__time num">۰:۲۵</span>
+            </div>
+            <h3 class="method__name">Espresso</h3>
+            <p class="method__fa">اسپرسو — غلیظ و کوتاه</p>
+            <p class="method__spec num">۱۸ گ دوز · ۳۶ گ خروجی</p>
+            <span class="method__line" aria-hidden="true"></span>
+          </article>
+
+          <article class="method" data-reveal>
+            <div class="method__top">
+              <span class="method__idx num">۰۳</span>
+              <span class="method__time num">۰۴:۰۰</span>
+            </div>
+            <h3 class="method__name">Chemex</h3>
+            <p class="method__fa">کمکس — بدنهٔ سنگین</p>
+            <p class="method__spec num">۳۰ گ قهوه · ۵۰۰ گ آب · ۹۳°</p>
+            <span class="method__line" aria-hidden="true"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · CUP -->
+    <section id="cup" class="section section--center" data-scene="cup">
+      <div class="wrap">
+        <p class="eyebrow center" data-reveal>۰۳ — فنجان</p>
+        <h2 class="statement" data-lines>
+          <span class="line"><span>فنجان،</span></span>
+          <span class="line"><span>آخرین ایستگاه.</span></span>
+        </h2>
+        <p class="lede center" data-reveal>
+          اینجا همه‌چیز باید درست باشد: دمای آب، نسبت، و دستی که می‌ریزد.
+        </p>
+      </div>
+      <div class="wrap cup__quote">
+        <blockquote class="pull" data-reveal>
+          «قهوهٔ خوب ادعا نیست؛ وزن است، دما است، زمان است.»
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 04 · MENU -->
+    <section id="menu" class="section" data-scene="menu">
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow" data-reveal>۰۴ — منو</p>
+          <h2 class="display" data-lines>
+            <span class="line"><span>منوی</span></span>
+            <span class="line"><span>پاییز ۱۴۰۵</span></span>
+          </h2>
+        </div>
+
+        <ul class="menu col-wide">
+          <li class="menu__row" data-reveal>
+            <div>
+              <h3 class="menu__name">اسپرسو دوپیو</h3>
+              <p class="menu__desc">۱۸ گرم، ۳۶ گرم خروجی</p>
+            </div>
+            <span class="menu__price num">۹۵٬۰۰۰</span>
+          </li>
+          <li class="menu__row" data-reveal>
+            <div>
+              <h3 class="menu__name">فلتوایت</h3>
+              <p class="menu__desc">دوپیو و ۱۲۰ گرم شیر</p>
+            </div>
+            <span class="menu__price num">۱۱۰٬۰۰۰</span>
+          </li>
+          <li class="menu__row" data-reveal>
+            <div>
+              <h3 class="menu__name">V60 تک‌خاستگاه</h3>
+              <p class="menu__desc">۱۵ گرم قهوه، ۲۵۰ گرم آب</p>
+            </div>
+            <span class="menu__price num">۱۴۵٬۰۰۰</span>
+          </li>
+          <li class="menu__row" data-reveal>
+            <div>
+              <h3 class="menu__name">کمکس</h3>
+              <p class="menu__desc">۳۰ گرم قهوه، ۵۰۰ گرم آب</p>
+            </div>
+            <span class="menu__price num">۱۶۰٬۰۰۰</span>
+          </li>
+          <li class="menu__row" data-reveal>
+            <div>
+              <h3 class="menu__name">لاته</h3>
+              <p class="menu__desc">۱۸ گرم، ۲۰۰ گرم شیر</p>
+            </div>
+            <span class="menu__price num">۱۲۰٬۰۰۰</span>
+          </li>
+          <li class="menu__row" data-reveal>
+            <div>
+              <h3 class="menu__name">موکا</h3>
+              <p class="menu__desc">شکلات تلخ ۷۰٪</p>
+            </div>
+            <span class="menu__price num">۱۳۵٬۰۰۰</span>
+          </li>
+        </ul>
+
+        <p class="menu__note" data-reveal>قیمت‌ها به تومان است. شیر گیاهی، ۲۰٬۰۰۰ تومان.</p>
+      </div>
+    </section>
+
+    <!-- 05 · VISIT -->
+    <section id="visit" class="section" data-scene="visit">
+      <div class="wrap">
+        <div class="col">
+          <p class="eyebrow" data-reveal>۰۵ — کافه</p>
+          <h2 class="display" data-lines>
+            <span class="line"><span>کریمخان،</span></span>
+            <span class="line"><span>تهران.</span></span>
+          </h2>
+          <p class="lede" data-reveal>
+            یک اتاق کوچک با یک میز بلند، بارِ چوبی، و پنجره‌ای که رو به خیابان باز می‌شود.
+            برای گروه‌های چهار نفره و بیشتر، رزرو پیشنهاد می‌شود.
+          </p>
+
+          <dl class="facts" data-reveal>
+            <div><dt>نشانی</dt><dd>تهران، خیابان کریمخان زند، بین ایرانشهر و سپهبد قرنی</dd></div>
+            <div><dt>ساعت</dt><dd class="num">شنبه تا پنجشنبه ۰۷:۰۰–۲۳:۰۰ · جمعه ۰۹:۰۰–۲۳:۰۰</dd></div>
+            <div><dt>ایمیل</dt><dd><a class="link" href="mailto:hello@roast.cafe">hello@roast.cafe</a></dd></div>
+          </dl>
+
+          <div class="visit__acts" data-reveal>
+            <a class="btn btn--solid" href="https://www.google.com/maps/search/?api=1&query=Karimkhan+Zand+Street+Tehran" target="_blank" rel="noopener"><span>مسیریابی</span><i class="arr" aria-hidden="true"></i></a>
+            <a class="btn btn--ghost" href="mailto:reserve@roast.cafe?subject=%D8%B1%D8%B2%D8%B1%D9%88%20%D9%85%DB%8C%D8%B2"><span>رزرو با ایمیل</span></a>
+          </div>
+        </div>
+
+        <form class="book" id="book" novalidate>
+          <p class="book__title">درخواست رزرو</p>
+          <div class="book__grid">
+            <div class="field">
+              <label for="date">تاریخ</label>
+              <select id="date" name="date" required></select>
+            </div>
+            <div class="field">
+              <label for="time">ساعت</label>
+              <select id="time" name="time" required>
+                <option value="08:00">۰۸:۰۰</option>
+                <option value="10:00">۱۰:۰۰</option>
+                <option value="12:00">۱۲:۰۰</option>
+                <option value="16:00">۱۶:۰۰</option>
+                <option value="18:00" selected>۱۸:۰۰</option>
+                <option value="20:00">۲۰:۰۰</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="guests">نفرات</label>
+              <select id="guests" name="guests" required>
+                <option value="2">۲ نفر</option>
+                <option value="3">۳ نفر</option>
+                <option value="4">۴ نفر</option>
+                <option value="6">۶ نفر</option>
+                <option value="8">۸ نفر</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn--solid book__submit" type="submit"><span>ارسال درخواست</span><i class="arr" aria-hidden="true"></i></button>
+          <p class="book__note" id="book-note" role="status">درخواست از طریق ایمیل ارسال می‌شود و تا یک روز کاری تأیید می‌شود.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__top">
+      <div class="footer__brand">
+        <span class="brand__fa">رُست</span>
+        <span class="brand__en">ROASTERY &amp; CAFÉ</span>
+      </div>
+      <nav class="footer__nav" aria-label="ناوبری پایین">
+        <a href="#bean">دانه</a>
+        <a href="#brew">دم‌آوری</a>
+        <a href="#menu">منو</a>
+        <a href="#visit">کافه</a>
+      </nav>
+      <a class="link" href="mailto:hello@roast.cafe">hello@roast.cafe</a>
+    </div>
+
+    <div class="footer__mark" aria-hidden="true">رُست</div>
+
+    <div class="wrap footer__bottom">
+      <p>© ۱۴۰۵ رُست. همه حقوق محفوظ است.</p>
+      <p class="footer__credit">
+        <span>طراحی و توسعه:</span>
+        <a class="link" href="https://smartali.ir" target="_blank" rel="noopener">علی شفیعی</a>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <a class="link" href="https://smartali.ir" target="_blank" rel="noopener">Smartali.ir</a>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <a class="link" href="mailto:info@smartali.ir">info@smartali.ir</a>
+      </p>
+      <p>کریمخان زند، تهران — ۰۷:۰۰ تا ۲۳:۰۰</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
